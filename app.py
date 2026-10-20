@@ -2,6 +2,23 @@ import streamlit as st
 import requests
 
 st.set_page_config(page_title="AI 编程小助手", page_icon="🐳")
+st.markdown(
+    """
+    <style>
+    .dev-signature {
+        position: fixed;
+        top: 60px; /* 改到 60px，避开顶部的白色工具栏 */
+        right: 60px; 
+        font-size: 13px;
+        color: #a0a0a0; 
+        z-index: 9999999; /* 加到最大，防止被盖住 */
+        font-family: sans-serif;
+    }
+    </style>
+    <div class="dev-signature">开发者：夏金俊</div>
+    """,
+    unsafe_allow_html=True
+)
 st.title("🐳 AI 编程小助手")
 st.write("把你不懂的 Python 报错贴进来，AI 老师帮你解答。")
 
